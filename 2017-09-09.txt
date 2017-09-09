@@ -1,0 +1,65 @@
+﻿배열 : 
+
+var abcd = new Array();
+
+abcd[0] = 1;
+abcd[1] = 2;
+abcd[2] = 3;
+abcd[3] = 4;
+abcd[4] = 5;
+
+for(var a = 0 ; a < abcd.length ; a++)
+{
+	console.log(abcd[a]);
+}
+
+/* 방법1 : Type1 - Regular*/
+var arr1 = new Array();
+arr1[0] = "C.m.A 1";
+arr1[1] = "C.m.A 2";
+arr1[2] = "C.m.A 3";
+ 
+/* 방법2 : Type2 - Condensed*/
+var arr2 = new Array("C.m.A 1", "C.m.A 2", "C.m.A 3");
+ 
+/* 방법3 : Type3 - Literal ==> 권장 */
+var arr3 = ["C.m.A 1", "C.m.A 2", "C.m.A 3"];
+
+var arr4 = new Array(5); // 배열 요소갯수 선언
+var arr5 = [5]; // 배열 요소갯수 선언
+var arr6 = new Array(); // 빈 배열 선언
+ 
+var arr7 = []; // 빈 배열 선언
+arr7[0] = "C.m.A 1";
+arr7[1] = "C.m.A 2";
+arr7[2] = "C.m.A 3";
+
+배열의 길이 : 배열.length
+
+다차원 배열 : 배열에 배열을 넣어주면된다
+
+구구단 값을 전부 넣는 코드
+
+var arr = new Array();	// 구구단을 넣을 배열을 선언한다.
+for(var i=2; i <= 9;i++)	// 구구단은 2단부터 9단까지
+{
+	var index = i-2;	// 배열은 0부터 시작하니까 2를 빼준다.
+	var tmpArray = new Array();		// 임시 배열을 하나 만들어준다.
+
+	for(var j=1; j <= 9 ;j++)		// 실제로 값을 계산한다.
+	{
+		tmpArray[j-1] = i * j;	// 계산한 값을 차례대로 임시 배열에 넣어준다.
+	}
+	arr[index] = tmpArray;		// 다 만든 임시 배열을 구구단 배열에 차례대로 넣어준다.
+}
+
+
+3항 연산자
+
+var b = 10;
+var a = b < 20 ? "hello" : "bye";
+
+if(b < 20)
+	a = "hello";
+else
+	a = "bye";
